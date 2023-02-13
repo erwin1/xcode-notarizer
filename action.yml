@@ -67,7 +67,7 @@ runs:
         else:
             temp_file_path = package_path
         notarize_command = "xcrun notarytool submit " + temp_file_path + \
-                           " --output-format json --wait" + \
+                           " --output-format json --wait --no-progress" + \
                            ' --apple-id "${{ inputs.apple-id }}"' + \
                            ' --password "${{ inputs.app-password }}"' + \
                            ' --team-id "${{ inputs.team-id }}"'
